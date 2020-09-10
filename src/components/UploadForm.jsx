@@ -9,9 +9,6 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
-    "& > *": {
-      margin: theme.spacing(1),
-    },
   },
   input: {
     display: "none",
