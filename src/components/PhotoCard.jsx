@@ -9,21 +9,27 @@ const useStyles = makeStyles({
     maxWidth: "100%",
   },
 });
-const PhotoCard = ({ image }) => {
+const PhotoCard = ({ image, handleModalPopup, setSelectedImage }) => {
   const classes = useStyles();
 
+  const handleSelect = () => {
+    handleModalPopup(true);
+    setSelectedImage(image);
+  };
   return (
-    <Card className={classes.root}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          alt="Contemplative Reptile"
-          height="250"
-          image={image.url}
-          title="Contemplative Reptile"
-        />
-      </CardActionArea>
-    </Card>
+    <React.Fragment>
+      <Card className={classes.root}>
+        <CardActionArea onClick={handleSelect}>
+          <CardMedia
+            component="img"
+            alt="Contemplative Reptile"
+            height="250"
+            image={image.url}
+            title="Contemplative Reptile"
+          />
+        </CardActionArea>
+      </Card>
+    </React.Fragment>
   );
 };
 

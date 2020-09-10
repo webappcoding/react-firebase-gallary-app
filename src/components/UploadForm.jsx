@@ -16,6 +16,9 @@ const useStyles = makeStyles((theme) => ({
   input: {
     display: "none",
   },
+  button: {
+    border: "2px solid " + theme.palette.primary.main,
+  },
 }));
 
 const UploadForm = () => {
@@ -52,8 +55,9 @@ const UploadForm = () => {
             color="primary"
             aria-label="upload picture"
             component="span"
+            className={classes.button}
           >
-            <PhotoCamera />
+            <PhotoCamera fontSize="large" />
           </IconButton>
         </label>
 
