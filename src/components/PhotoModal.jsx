@@ -21,7 +21,9 @@ const PhotoModal = ({ open, setOpen, image }) => {
       aria-labelledby="alert-dialog-slide-title"
       aria-describedby="alert-dialog-slide-description"
     >
-      <DialogContent style={{ padding: 0, overflowY: "hidden" }}>
+      <DialogContent
+        style={{ padding: 0, overflowY: "hidden", display: "flex" }}
+      >
         <img src={image} alt="ok" style={{ width: "100%" }} />
       </DialogContent>
     </Dialog>
